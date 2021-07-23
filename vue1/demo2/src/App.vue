@@ -5,7 +5,11 @@
 </template>
 
 <style lang="scss">
-#app{
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
 }
 </style>
