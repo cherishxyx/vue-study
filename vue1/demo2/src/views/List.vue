@@ -7,8 +7,7 @@
       </li>
     </ul>
     <div>
-      <button type="button" class="btn" @click="ToAddPage()">添加</button>
-      <button type="button" class="btn" @click="ExitLogin()">退出登录</button>
+      <button type="button" class="btn" @click="ToAddPage()">发布文章</button>
     </div>
   </div>
 </template>
@@ -26,14 +25,11 @@ export default {
   methods: {
     ToAddPage () {
       this.$router.push('/add')
-    },
-    ExitLogin () {
-      this.$router.push('/')
     }
   }
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 
 </style>

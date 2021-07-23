@@ -1,22 +1,26 @@
 <template>
-  <div>
+  <div id="login">
     <form action="" v-if="!isRegPage">
-      用户名：
-      <input type="text" v-model="name">
-      密码：
-      <input type="password" v-model="password">
-      <button type="button" @click="login()">登录</button>
-      <button type="button" @click="reg()">注册</button>
+      <div class="x"><p>用户名：</p></div>
+      <div><input class="inputBox" type="text" v-model="name"></div>
+      <div class="x"><p>密码：</p></div>
+      <div><input class="inputBox" type="password" v-model="password"></div>
+      <div class="footer">
+        <button class="btn" type="button" @click="login()">登录</button>
+        <button class="btn" type="button" @click="reg()">注册</button>
+      </div>
     </form>
     <form action="" v-if="isRegPage">
-      用户名：
-      <input type="text" v-model="name">
-      密码：
-      <input type="password" v-model="password">
-      再次输入密码：
-      <input type="password" v-model="repeat">
-      <button type="button" @click="addUser()">确定</button>
-      <button type="button" @click="cancel()">取消</button>
+      <div class="x"><p>用户名：</p></div>
+      <div><input class="inputBox" type="text" v-model="name"></div>
+      <div class="x"><p>密码：</p></div>
+      <div><input class="inputBox" type="password" v-model="password"></div>
+      <div class="x"><p>再次输入密码：</p></div>
+      <div><input class="inputBox" type="password" v-model="repeat"></div>
+      <div class="footer">
+        <button class="btn" type="button" @click="addUser()">确定</button>
+        <button class="btn" type="button" @click="cancel()">取消</button>
+      </div>
     </form>
   </div>
 </template>
@@ -86,5 +90,47 @@ export default {
 </script>
 
 <style scoped>
-
+#login{
+  position: fixed;
+  left: 0;
+  top: 25%;
+  width: 100%;
+}
+p{
+  width: 150px;
+  height: 100px;
+  line-height: 100px;
+  font-size: 25px;
+  color: #42b983;
+}
+form{
+  text-align: center;
+}
+form div{
+  float: left;
+}
+.x{
+  clear: left;
+}
+.inputBox{
+  width: 200px;
+  height: 60px;
+  margin: 20px 0;
+}
+.footer{
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.btn{
+  border: 1px solid #000;
+  background: #42b983;
+  width: 100%;
+}
 </style>
